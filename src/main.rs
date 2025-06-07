@@ -1,6 +1,7 @@
-pub mod interpreter;
+use rlox::Interpreter;
+
 fn main() {
-    let mut interpreter: interpreter::Interpreter = interpreter::Interpreter::new();
+    let mut interpreter = Interpreter::new();
     if interpreter.args.len() > 2 {
         println!("Usage: rlox [script]");
         std::process::exit(64);
